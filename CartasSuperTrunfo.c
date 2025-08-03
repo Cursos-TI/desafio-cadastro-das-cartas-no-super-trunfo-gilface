@@ -2,7 +2,7 @@
 
 int main() {
     //  Variáveis para a Carta 1
-    char estado1;
+    char estado1[3]; // Usando 3 para incluir o terminador nulo
     char codigo1[10];
     char cidade1[50];
     int populacao1;
@@ -14,7 +14,7 @@ int main() {
     float renda_per_capita1;
 
     //  Variáveis para a Carta 2
-    char estado2;
+    char estado2[3]; // Usando 3 para incluir o terminador nulo
     char codigo2[10];
     char cidade2[50];
     int populacao2;
@@ -34,10 +34,10 @@ int main() {
     scanf(" %s", &estado1);
 
     printf("Digite o codigo da carta: ");
-    scanf("%9s", codigo1);
+    scanf("%9s", &codigo1);
 
     printf("Digite o nome da cidade: ");
-    scanf("%49s", cidade1);
+    scanf("%49s", &cidade1);
 
     printf("Digite a população da cidade: ");
     scanf("%d", &populacao1);
@@ -58,10 +58,10 @@ int main() {
     scanf(" %s", &estado2);
 
     printf("Digite o codigo da carta: ");
-    scanf("%9s", codigo2);
+    scanf("%9s", &codigo2);
 
     printf("Digite o nome da cidade: ");
-    scanf("%49s", cidade2);
+    scanf("%49s", &cidade2);
 
     printf("Digite a população da cidade: ");
     scanf("%d", &populacao2);
@@ -108,7 +108,7 @@ int main() {
     printf("\n------------------------\n");
     printf("Dados da Carta 2:\n");
     printf("------------------------\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
@@ -120,8 +120,5 @@ int main() {
     printf("Renda Per Capita: %.2f reais\n", renda_per_capita2);
     printf("------------------------\n");
 
-
-    
-    // Retornar 0 para indicar que o programa terminou corretamente
     return 0;
 }
